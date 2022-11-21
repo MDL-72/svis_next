@@ -24,3 +24,22 @@ a {
     background: black;
   }
 }
+
+.mobile__burger__transition-enter,
+.mobile__menu__transition-enter {
+  opacity: 0;
+}
+.mobile__burger__transition-exit,
+.mobile__menu__transition-exit {
+  opacity: 1;
+}
+.mobile__burger__transition-enter-active,
+.mobile__menu__transition-enter-active {
+  opacity: 1;
+  transition: 500ms;
+}
+.mobile__burger__transition-exit-active,
+.mobile__menu__transition-exit-active {
+  opacity: 0;
+  transition: 500ms;
+}
