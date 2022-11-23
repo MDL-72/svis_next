@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 html,
-body {
+body, * {
   padding: 0;
   margin: 0;
   font-family:   'Roboto Slab', serif;

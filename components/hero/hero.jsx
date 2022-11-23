@@ -15,42 +15,52 @@ export default function Hero() {
     "/": "/hero2.jpg",
     "/about-us": "/abouthero.jpg",
     "/contact-us": "/connect.jpg",
+    "/news-and-events": "/connect.jpg",
   };
 
   const image_hero_size_dictionary = {
     "/": "200vh",
     "/about-us": `50vh`,
     "/contact-us": `50vh`,
+    "/news-and-events": `50vh`,
   };
 
   const hero_classes_dictionary = {
     "/": `home__hero__cont`,
     "/about-us": `about__hero__cont`,
     "/contact-us": `about__hero__cont`,
+    "/news-and-events": `about__hero__cont`,
   };
 
   const hero_classes_content_dictionary = {
     "/": `home__hero__content__cont`,
     "/about-us": `about__hero__content__cont`,
     "/contact-us": `about__hero__content__cont`,
+    "/news-and-events": `about__hero__content__cont`,
   };
 
   const hero_image_str_dictionary = {
     "/": -400,
     "/about-us": -300,
     "/contact-us": -300,
+    "/news-and-events": -300,
   };
 
   const hero_header_class_dictionary = {
     "/": `home__hero__header__cont`,
     "/about-us": `hero__header__cont`,
     "/contact-us": `hero__header__cont`,
+    "/news-and-events": `hero__header__cont`,
   };
 
   const hero_image_header_line_text = {
     "/": [`Welcome`, ` to`, `Spring of Virtue Integrated School, Inc.`],
     "/about-us": [`About`, ` Spring of Virtue Integrated School`],
     "/contact-us": [`Contact`, ` Spring of Virtue Integrated School`],
+    "/news-and-events": [
+      `News & Events`,
+      ` Spring of Virtue Integrated School`,
+    ],
   };
 
   useEffect(() => {

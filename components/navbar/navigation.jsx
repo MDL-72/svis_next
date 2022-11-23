@@ -1,6 +1,7 @@
 import styles from "./navigation.module.scss";
 import Link from "next/link";
 
+import Mobilenav from "./mobilenav";
 import React, { useEffect, useState, useRef } from "react";
 import MovingComponent from "react-moving-text";
 import { CSSTransition } from "react-transition-group";
@@ -30,6 +31,29 @@ export default function Navigation() {
     }
   }, []);
 
+  const menuList = [
+    {
+      id: 1,
+      path: "/",
+      menuName: "Home",
+    },
+    {
+      id: 2,
+      path: "/about-us",
+      menuName: "About us",
+    },
+    {
+      id: 4,
+      path: "/news-and-events",
+      menuName: "News & Events",
+    },
+    {
+      id: 3,
+      path: "/contact-us",
+      menuName: "Contact us",
+    },
+  ];
+
   useEffect(() => {
     if (mobileMenu) {
       setIsLogo(true);
@@ -54,30 +78,21 @@ export default function Navigation() {
             <img src={"/logo.png"} alt="logo" />
           </div>
           <div className={styles[`navbar__menu__cont`]}>
-            <Link
-              href={"/"}
-              className={
-                styles[`navbar__menu__item${isScrolled ? "--bg_applied" : ""}`]
-              }
-            >
-              Home
-            </Link>
-            <Link
-              href={"/about-us"}
-              className={
-                styles[`navbar__menu__item${isScrolled ? "--bg_applied" : ""}`]
-              }
-            >
-              About us
-            </Link>
-            <Link
-              href={"/contact-us"}
-              className={
-                styles[`navbar__menu__item${isScrolled ? "--bg_applied" : ""}`]
-              }
-            >
-              Contact us
-            </Link>
+            {menuList.map((item) => {
+              return (
+                <Link
+                  key={item.id}
+                  href={item.path}
+                  className={
+                    styles[
+                      `navbar__menu__item${isScrolled ? "--bg_applied" : ""}`
+                    ]
+                  }
+                >
+                  {item.menuName}
+                </Link>
+              );
+            })}
           </div>
         </div>
       ) : (
@@ -133,32 +148,7 @@ export default function Navigation() {
         nodeRef={mobileNavMenuRef}
       >
         <div className={styles.mobile__menu__cont} ref={mobileNavMenuRef}>
-          <div className={styles.mobile__menu__logo__cont}>
-            <img src={"/logo.png"} alt="" />
-          </div>
-          <div className={styles.mobile__menu}>
-            <Link
-              href={"/"}
-              className={styles.mobile__menu__item}
-              onClick={() => setMobileMenu(!mobileMenu)}
-            >
-              Home
-            </Link>
-            <Link
-              href={"/about-us"}
-              className={styles.mobile__menu__item}
-              onClick={() => setMobileMenu(!mobileMenu)}
-            >
-              About us
-            </Link>
-            <Link
-              href={"/contact-us"}
-              className={styles.mobile__menu__item}
-              onClick={() => setMobileMenu(!mobileMenu)}
-            >
-              Contact us
-            </Link>
-          </div>
+          <Mobilenav menuList={menuList} />
         </div>
       </CSSTransition>
     </>

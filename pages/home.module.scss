@@ -1,3 +1,56 @@
 .container {
   overflow: hidden;
 }
+
+.home__content__cont {
+  display: flex;
+  justify-content: center;
+}
+
+.home__online__admission__cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  width: 80%;
+}
+
+.home__online__admission__asset {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.home__online__admission__text__cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5em;
+
+  width: 50%;
+}
+
+.home__online__admission__cta {
+  display: flex;
+  justify-content: center;
+
+  margin: 1em 0;
+  width: fit-content;
+  padding: 1em 2em;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background: rgb(236, 153, 75);
+  color: rgb(241, 238, 233);
+
+  font-size: 1em;
+  text-shadow: 1px 1px 2px #73777b;
+
+  transition: 0.5s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
