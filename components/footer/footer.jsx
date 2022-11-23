@@ -38,7 +38,7 @@ export default function Footer() {
             <span>Follow us on</span>
             <a
               href="https://www.facebook.com/SVISofficial"
-              rel="nofollow"
+              rel="noreferrer"
               target={"_blank"}
             >
               <img src={"/facebook.png"} alt="" />

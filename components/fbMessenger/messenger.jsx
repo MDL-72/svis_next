@@ -6,7 +6,7 @@ function Messenger() {
       <div id="fb-root"></div>
 
       <div id="fb-customer-chat" class="fb-customerchat"></div>
-      <Script strategy="lazyOnload">
+      <Script strategy="lazyOnload" id="">
         {`
           var chatbox = document.getElementById("fb-customer-chat");
           chatbox.setAttribute("page_id", "484551888754393");
@@ -28,7 +28,7 @@ function Messenger() {
             js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
             fjs.parentNode.insertBefore(js, fjs);
           })(document, "script", "facebook-jssdk");
-          
+
         `}
       </Script>
     </div>
