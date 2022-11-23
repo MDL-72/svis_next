@@ -63,7 +63,7 @@ export default function Navigation() {
               Home
             </Link>
             <Link
-              href={"/about_us"}
+              href={"/about-us"}
               className={
                 styles[`navbar__menu__item${isScrolled ? "--bg_applied" : ""}`]
               }
@@ -71,7 +71,7 @@ export default function Navigation() {
               About us
             </Link>
             <Link
-              href={"/contact_us"}
+              href={"/contact-us"}
               className={
                 styles[`navbar__menu__item${isScrolled ? "--bg_applied" : ""}`]
               }
@@ -137,13 +137,25 @@ export default function Navigation() {
             <img src={"/logo.png"} alt="" />
           </div>
           <div className={styles.mobile__menu}>
-            <Link href={"/"} className={styles.mobile__menu__item}>
+            <Link
+              href={"/"}
+              className={styles.mobile__menu__item}
+              onClick={() => setMobileMenu(!mobileMenu)}
+            >
               Home
             </Link>
-            <Link href={"/about_us"} className={styles.mobile__menu__item}>
+            <Link
+              href={"/about-us"}
+              className={styles.mobile__menu__item}
+              onClick={() => setMobileMenu(!mobileMenu)}
+            >
               About us
             </Link>
-            <Link href={"/contact_us"} className={styles.mobile__menu__item}>
+            <Link
+              href={"/contact-us"}
+              className={styles.mobile__menu__item}
+              onClick={() => setMobileMenu(!mobileMenu)}
+            >
               Contact us
             </Link>
           </div>

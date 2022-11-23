@@ -3,25 +3,78 @@ import { Parallax } from "react-parallax";
 import MovingComponent from "react-moving-text";
 import styles from "./hero.module.scss";
 import { Fade } from "react-awesome-reveal";
+import { useRouter } from "next/router";
 
 export default function Hero() {
+  const [pathName, setPathName] = useState();
   const [isReady, setIsReady] = useState();
+  const router = useRouter();
+  const pathNameQuery = router?.pathname;
+
+  const image_dictionary = {
+    "/": "/hero2.jpg",
+    "/about-us": "/abouthero.jpg",
+    "/contact-us": "/connect.jpg",
+  };
+
+  const image_hero_size_dictionary = {
+    "/": "200vh",
+    "/about-us": `50vh`,
+    "/contact-us": `50vh`,
+  };
+
+  const hero_classes_dictionary = {
+    "/": `home__hero__cont`,
+    "/about-us": `about__hero__cont`,
+    "/contact-us": `about__hero__cont`,
+  };
+
+  const hero_classes_content_dictionary = {
+    "/": `home__hero__content__cont`,
+    "/about-us": `about__hero__content__cont`,
+    "/contact-us": `about__hero__content__cont`,
+  };
+
+  const hero_image_str_dictionary = {
+    "/": -400,
+    "/about-us": -300,
+    "/contact-us": -300,
+  };
+
+  const hero_header_class_dictionary = {
+    "/": `home__hero__header__cont`,
+    "/about-us": `hero__header__cont`,
+    "/contact-us": `hero__header__cont`,
+  };
+
+  const hero_image_header_line_text = {
+    "/": [`Welcome`, ` to`, `Spring of Virtue Integrated School, Inc.`],
+    "/about-us": [`About`, ` Spring of Virtue Integrated School`],
+    "/contact-us": [`Contact`, ` Spring of Virtue Integrated School`],
+  };
 
   useEffect(() => {
     setIsReady(true);
+    setPathName(pathNameQuery);
   }, []);
+
+  useEffect(() => {
+    setPathName(pathNameQuery);
+  }, [pathNameQuery]);
 
   return (
     <>
       {isReady && (
         <Parallax
-          className={styles.home__hero__cont}
+          className={styles[hero_classes_dictionary[pathName]]}
           blur={4}
-          bgImage="/hero2.jpg"
-          strength={-400}
-          bgImageStyle={{ minHeight: "200vh" }}
+          bgImage={image_dictionary[pathName]}
+          strength={hero_image_str_dictionary[pathName]}
+          bgImageStyle={{
+            minHeight: image_hero_size_dictionary[pathName],
+          }}
         >
-          <div className={styles.home__hero__content__cont}>
+          <div className={styles[hero_classes_content_dictionary[pathName]]}>
             <MovingComponent
               type="zoomIn"
               duration="1000ms"
@@ -32,9 +85,12 @@ export default function Hero() {
               fillMode="both"
             >
               <Fade>
-                <h1>
-                  Welcome <br /> to <br /> Spring of Virtue Integrated School,
-                  Inc.
+                <h1 className={styles[hero_header_class_dictionary[pathName]]}>
+                  <span>
+                    {hero_image_header_line_text[pathName][0]} <br />
+                    {hero_image_header_line_text[pathName]?.[1]} <br />
+                    {hero_image_header_line_text[pathName]?.[2]}
+                  </span>
                 </h1>
               </Fade>
             </MovingComponent>

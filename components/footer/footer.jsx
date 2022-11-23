@@ -36,7 +36,11 @@ export default function Footer() {
         <div className={styles["footer__social__cont"]}>
           <div className={styles["footer__social"]}>
             <span>Follow us on</span>
-            <a href="https://www.facebook.com/SVISofficial" target={"_blank"}>
+            <a
+              href="https://www.facebook.com/SVISofficial"
+              rel="nofollow"
+              target={"_blank"}
+            >
               <img src={"/facebook.png"} alt="" />
             </a>
           </div>

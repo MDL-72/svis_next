@@ -13,8 +13,8 @@ export default function HomePage() {
 
   const pathToTitleMap = {
     "/": "SVIS - Home",
-    "/about": "SVIS - About us",
-    "/contact_us": "SVIS - Contact us",
+    "/about-us": "SVIS - About us",
+    "/contact-us": "SVIS - Contact us",
   };
 
   const navigate = useRouter();
@@ -32,9 +32,5 @@ export default function HomePage() {
     }
   }, []);
 
-  return (
-    <div className={styles[`container`]}>
-      <Hero />
-    </div>
-  );
+  return <div className={styles[`container`]}>homepage</div>;
 }
