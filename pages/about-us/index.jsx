@@ -5,6 +5,7 @@ export default function AboutPage() {
     {
       id: 1,
       imageArticle: "hero2",
+      imageSizeHeigth: 1000,
       contentTitle: "SVIS History",
       contentText:
         "Spring of Virtue Integrated School was founded in 2008 by a group of parents and educators. It was originally called Spring of Virtue Learning Center, but in 2012, Editha Liberato decided to change the name to Spring of Virtue Integrated School. This new name was chosen because she wanted the school to be a place where students could develop their own virtues, such as honesty and courage, rather than just learning about them from books or lectures.",
@@ -16,6 +17,7 @@ export default function AboutPage() {
     {
       id: 2,
       imageArticle: "team",
+      imageSizeHeigth: 400,
       contentTitle: "SVIS Mission",
       leftSideText: true,
       slideDirection: "right",
@@ -25,6 +27,7 @@ export default function AboutPage() {
     {
       id: 3,
       imageArticle: "graduates",
+      imageSizeHeigth: 400,
       contentTitle: "SVIS Vision",
       leftSideText: false,
       slideDirection: "left",
@@ -70,6 +73,7 @@ export default function AboutPage() {
               leftSideText={item.leftSideText}
               carouselImages={item.carouselImages}
               slideDirection={item.slideDirection}
+              imageSizeHeigth={item.imageSizeHeigth}
             />
           );
         })}

@@ -1,5 +1,6 @@
 import styles from "./navigation.module.scss";
 import Link from "next/link";
+import Image from "next/image";
 
 import Mobilenav from "./mobilenav";
 import React, { useEffect, useState, useRef } from "react";
@@ -75,7 +76,7 @@ export default function Navigation() {
               styles[`navbar__logo__cont${isScrolled ? "--bg_applied" : ""}`]
             }
           >
-            <img src={"/logo.png"} alt="SVIS logo" />
+            <Image src={"/logo.png"} alt="SVIS logo" height={100} width={80} />
           </div>
           <div className={styles[`navbar__menu__cont`]}>
             {menuList.map((item) => {

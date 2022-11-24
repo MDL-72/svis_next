@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { Slide, Fade } from "react-awesome-reveal";
 import { Carousel } from "react-responsive-carousel";
 import styles from "../../styles/home.module.scss";
+import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 export default function HomeArticleModal(props) {
@@ -23,6 +24,7 @@ export default function HomeArticleModal(props) {
     ctaPath,
     imageArticle,
     carouselImages,
+    imageSizeHeigth,
   } = props;
 
   const ArticleContent = () => {
@@ -57,7 +59,13 @@ export default function HomeArticleModal(props) {
         <Slide direction={slideDirection}>
           {animationJson && <LottieAnimation animationJson={animationJson} />}
           {imageArticle && (
-            <img src={`/${imageArticle}.webp`} alt={`${imageArticle} SVIS`} />
+            <Image
+              src={`/${imageArticle}.webp`}
+              alt={`${imageArticle} SVIS`}
+              width={200}
+              height={imageSizeHeigth}
+              // fill
+            />
           )}
           {carouselImages && (
             <Carousel
@@ -70,7 +78,12 @@ export default function HomeArticleModal(props) {
               {carouselImages.map((item) => {
                 return (
                   <div className={styles["carousel__content__cont"]} key={item}>
-                    <img src={`/${item}.webp`} alt="" />
+                    <Image
+                      src={`/${item}.webp`}
+                      alt={`${item} ico SVIS`}
+                      width={400}
+                      height={200}
+                    />
                   </div>
                 );
               })}

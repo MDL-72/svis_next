@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./cardModal.module.scss";
+import Image from "next/image";
 import { useRouter } from "next/router";
 
 export default function CardModal(props) {
@@ -46,11 +47,12 @@ export default function CardModal(props) {
             >
               <>
                 <div className={styles["modal__card__content"]}>
-                  <img
-                    src={`./${item.image}.webp`}
+                  <Image
+                    src={`/${item.image}.webp`}
                     alt={`SVIS ${item.image} course icon`}
+                    height={200}
+                    width={200}
                   />
-
                   <p className={styles["modal__card__title__content"]}>
                     {item.title}
                     <br />

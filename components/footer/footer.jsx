@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./footer.module.scss";
+import Image from "next/image";
 
 // import mapPin_icon from "../../assets/image/map_pin.png";
 // import telephone_icon from "../../assets/image/telephone.png";
@@ -12,7 +13,7 @@ export default function Footer() {
     <div className={styles["footer__cont"]}>
       <div className={styles["footer"]}>
         <div className={styles["footer__address__cont"]}>
-          <img src={"/map_pin.png"} alt="map_pin" />
+          <Image src={"/map_pin.png"} alt="map_pin" height={25} width={100} />
           <span>
             Blk 25 Lot 1 Phase 2 Pinagsama Village,
             <br />
@@ -21,15 +22,20 @@ export default function Footer() {
         </div>
         <div className={styles["footer__contacts__cont"]}>
           <div className={styles["footer__contacts__item"]}>
-            <img src={"/telephone.png"} alt="map_pin" />
+            <Image
+              src={"/telephone.png"}
+              alt="map_pin"
+              height={25}
+              width={100}
+            />
             <span>02-85856240</span>
           </div>
           <div className={styles["footer__contacts__item"]}>
-            <img src={"/phone.png"} alt="map_pin" />
+            <Image src={"/phone.png"} alt="map_pin" height={25} width={100} />
             <span>0949-560-9903 / 0917-838-9940</span>
           </div>
           <div className={styles["footer__contacts__item"]}>
-            <img src={"/email.png"} alt="map_pin" />
+            <Image src={"/email.png"} alt="map_pin" height={25} width={100} />
             <span>springofvirtue08@yahoo.com</span>
           </div>
         </div>
@@ -41,7 +47,12 @@ export default function Footer() {
               rel="noreferrer"
               target={"_blank"}
             >
-              <img src={"/facebook.png"} alt="" />
+              <Image
+                src={"/facebook.png"}
+                alt="SVIS Facebook icon"
+                height={25}
+                width={100}
+              />
             </a>
           </div>
         </div>

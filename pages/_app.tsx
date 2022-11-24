@@ -10,7 +10,6 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-
         <meta name="title" content="Spring of Virtue Integrated School, Inc." />
         <meta name="description" content="We believe that our students should have the best possible education, and we are committed to providing them with the resources they need to succeed." />
         <meta name="keywords" content="SVIS, Spring of Virtue Integrated School, Inc. Spring of Virtue, School" />
@@ -21,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="author" content="MDL" />
 
         <meta charSet="utf-8" />
-        <link rel="icon" href="https://i.imgur.com/iGrCHHn.png" />
+        <link rel="icon" href="/logo.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
 
@@ -36,7 +35,7 @@ export default function App({ Component, pageProps }: AppProps) {
         {/* <!-- Google / Search Engine Tags --> */}
         <meta itemProp="name" content="Spring of Virtue Integrated School, Inc." />
         <meta itemProp="description" content="SVIS - Home" />
-        <meta itemProp="image" content="%PUBLIC_URL%/logo8.png" />
+        <meta itemProp="image" content="/logo.png" />
 
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
@@ -46,7 +45,7 @@ export default function App({ Component, pageProps }: AppProps) {
           property="og:description"
           content="Spring of Virtue Integrated School, Inc."
         />
-        <meta property="og:image" content="%PUBLIC_URL%/hero.webp" />
+        <meta property="og:image" content="/hero.jpg" />
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -56,12 +55,7 @@ export default function App({ Component, pageProps }: AppProps) {
           property="twitter:description"
           content="Spring of Virtue Integrated School, Inc."
         />
-        <meta property="twitter:image" content="%PUBLIC_URL%/hero.jpg" />
-
-        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-
-
-        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        <meta property="twitter:image" content="/hero.jpg" />
       </Head>
       <Layout>
         <Component {...pageProps} />
