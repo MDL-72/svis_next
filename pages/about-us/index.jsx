@@ -21,16 +21,28 @@ export default function AboutPage() {
         <HomeArticleModal
           imageArticle={"graduates"}
           contentTitle="SVIS Vision"
-          // leftSideText={true}
-          // slideDirection="right"
           contentText="Spring of Virtue Integrated School will be a superior private school providing an academic curriculum and promoting values formation and spiritual growth of the next generation of leaders, unleashing their full potential to prepare them to be responsible citizens of the society and global workforce."
-        />{" "}
+        />
         <HomeArticleModal
-          imageArticle={"graduates"}
           contentTitle="SVIS Facilities"
           leftSideText={true}
           slideDirection="right"
           contentText="Our goal is to create an environment that allows for optimal learning. We believe that students can learn best when they are surrounded by their peers and the resources needed to succeed. We also believe that students deserve a space in which they can be comfortable, safe, and inspired to learn."
+          carouselImages={["computerlab", "library", "sciencelab"]}
+        />
+        <HomeArticleModal
+          contentTitle="SVIS Faculties"
+          // leftSideText={true}
+          // slideDirection="right"
+          contentText="SVIS is a school with a difference. With experienced and highly-qualified faculties, we offer a unique learning experience that helps our students to grow and succeed. Our faculties are dedicated to their students and are always available to help them with their studies. "
+          contentText1="We believe that our students should have the best possible education, and we are committed to providing them with the resources they need to succeed."
+          carouselImages={[
+            "faculty1",
+            "faculty2",
+            "faculty3",
+            "team",
+            "teamstaff",
+          ]}
         />
       </div>
     </div>

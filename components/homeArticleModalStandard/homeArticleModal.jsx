@@ -2,7 +2,9 @@ import React from "react";
 import { LottieAnimation } from "../lottie/lottieModal";
 import { useRouter } from "next/router";
 import { Slide, Fade } from "react-awesome-reveal";
+import { Carousel } from "react-responsive-carousel";
 import styles from "../../styles/home.module.scss";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 export default function HomeArticleModal(props) {
   const router = useRouter();
@@ -20,6 +22,7 @@ export default function HomeArticleModal(props) {
     contentText2,
     ctaPath,
     imageArticle,
+    carouselImages,
   } = props;
 
   const ArticleContent = () => {
@@ -55,6 +58,23 @@ export default function HomeArticleModal(props) {
           {animationJson && <LottieAnimation animationJson={animationJson} />}
           {imageArticle && (
             <img src={`/${imageArticle}.webp`} alt={`${imageArticle} SVIS`} />
+          )}
+          {carouselImages && (
+            <Carousel
+              infiniteLoop
+              autoPlay
+              showStatus={false}
+              showArrows={false}
+              showThumbs={false}
+            >
+              {carouselImages.map((item) => {
+                return (
+                  <div className={styles["carousel__content__cont"]} key={item}>
+                    <img src={`/${item}.webp`} alt="" />
+                  </div>
+                );
+              })}
+            </Carousel>
           )}
         </Slide>
       </div>
