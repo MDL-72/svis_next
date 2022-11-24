@@ -1,9 +1,11 @@
 import React from "react";
 import { LottieAnimation } from "../lottie/lottieModal";
+import { useRouter } from "next/router";
 import { Slide, Fade } from "react-awesome-reveal";
 import styles from "../../styles/home.module.scss";
 
 export default function HomeArticleModal(props) {
+  const router = useRouter();
   const {
     slideDirection,
     animationJson,
@@ -14,6 +16,8 @@ export default function HomeArticleModal(props) {
     ctaText,
     leftSideText,
     contentText,
+    contentText2,
+    ctaPath,
   } = props;
 
   const ArticleContent = () => {
@@ -26,8 +30,12 @@ export default function HomeArticleModal(props) {
             {contentLine2}
           </h2>
           <p>{contentText}</p>
+          <p>{contentText2}</p>
           {cta && (
-            <button className={styles["home__online__admission__cta"]}>
+            <button
+              className={styles["home__online__admission__cta"]}
+              onClick={() => router.push(`${ctaPath}`)}
+            >
               {ctaText}
             </button>
           )}

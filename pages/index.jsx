@@ -45,6 +45,7 @@ export default function HomePage() {
           contentLine2="for SY: 2022 - 2023"
           cta={true}
           ctaText="Be a SVISian now"
+          ctaPath="contact-us"
         />
         <BannerModal
           titleLine1="Why Choose"
@@ -57,11 +58,22 @@ export default function HomePage() {
           // contentLine2="for SY: 2022 - 2023"
           cta={true}
           ctaText="Know more about SVIS"
+          ctaPath="/about-us"
           leftSideText={true}
           slideDirection="right"
         />
         <BannerModal titleLine1="Courses We Offer" />
         <CardModal />
+        <BannerModal titleLine1="Scholarship Program" />{" "}
+        <HomeArticleModal
+          animationJson="lottie-book"
+          contentTitle="SVIS in Partnership with TLC"
+          contentText="SVIS is partnered with TLC Scholarship Program, which offers scholarships in exchange for academic excellence and community involvement."
+          contentText2="As a member of TLC, you'll receive books, school uniforms, and an allowance—all free of charge!"
+          cta={true}
+          ctaText="Apply now"
+          ctaPath=""
+        />
       </div>
     </div>
   );

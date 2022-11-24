@@ -3,6 +3,11 @@
   width: 75%;
   display: flex;
   justify-content: space-evenly;
+
+  @media (max-width: 440px) {
+    flex-direction: column;
+    row-gap: 3em;
+  }
 }
 
 .modal__card__content__cont {

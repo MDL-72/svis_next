@@ -27,7 +27,7 @@ export default function CardModal(props) {
     },
     {
       id: 3,
-      image: "kindergarten",
+      image: "highschool",
       title: "High School",
       //   title2: "&",
       title3: "Grade 7 - Grade 10",
@@ -44,7 +44,7 @@ export default function CardModal(props) {
               <>
                 <div className={styles["modal__card__content"]}>
                   <img
-                    src={`./${item.image}.jpg`}
+                    src={`./${item.image}.webp`}
                     alt={`SVIS ${item.image} course icon`}
                   />
 
