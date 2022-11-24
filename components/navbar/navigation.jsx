@@ -75,7 +75,7 @@ export default function Navigation() {
               styles[`navbar__logo__cont${isScrolled ? "--bg_applied" : ""}`]
             }
           >
-            <img src={"/logo.png"} alt="logo" />
+            <img src={"/logo.png"} alt="SVIS logo" />
           </div>
           <div className={styles[`navbar__menu__cont`]}>
             {menuList.map((item) => {
@@ -88,6 +88,7 @@ export default function Navigation() {
                       `navbar__menu__item${isScrolled ? "--bg_applied" : ""}`
                     ]
                   }
+                  title={`SVIS - ${item.menuName}`}
                 >
                   {item.menuName}
                 </Link>
@@ -122,7 +123,7 @@ export default function Navigation() {
                       ]
                     }
                   >
-                    <img src={"/logo.png"} alt="nav icon" />
+                    <img src={"/logo.png"} alt="svis mobile icon" />
                   </MovingComponent>
                 )}
                 <CSSTransition
@@ -132,7 +133,7 @@ export default function Navigation() {
                   timeout={300}
                 >
                   <div className={styles[`mobile__burger__cont--active`]}>
-                    <img src="/cancel.png" alt="exit" />
+                    <img src="/cancel.png" alt="exit icon" />
                   </div>
                 </CSSTransition>
               </div>
