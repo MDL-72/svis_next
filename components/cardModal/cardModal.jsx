@@ -40,7 +40,10 @@ export default function CardModal(props) {
       <div className={styles["modal__card__cont"]}>
         {courseData.map((item) => {
           return (
-            <div className={styles["modal__card__content__cont"]}>
+            <div
+              className={styles["modal__card__content__cont"]}
+              key={item.title}
+            >
               <>
                 <div className={styles["modal__card__content"]}>
                   <img
