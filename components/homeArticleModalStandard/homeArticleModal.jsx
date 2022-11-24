@@ -62,7 +62,7 @@ export default function HomeArticleModal(props) {
             <Image
               src={`/${imageArticle}.webp`}
               alt={`${imageArticle} SVIS`}
-              width={200}
+              width={400}
               height={imageSizeHeigth}
               // fill
             />
