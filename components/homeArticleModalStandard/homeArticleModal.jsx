@@ -16,8 +16,10 @@ export default function HomeArticleModal(props) {
     ctaText,
     leftSideText,
     contentText,
+    contentText1,
     contentText2,
     ctaPath,
+    imageArticle,
   } = props;
 
   const ArticleContent = () => {
@@ -30,6 +32,7 @@ export default function HomeArticleModal(props) {
             {contentLine2}
           </h2>
           <p>{contentText}</p>
+          <p>{contentText1}</p>
           <p>{contentText2}</p>
           {cta && (
             <button
@@ -49,7 +52,10 @@ export default function HomeArticleModal(props) {
       {leftSideText ? ArticleContent() : null}
       <div className={styles["home__online__admission__asset"]}>
         <Slide direction={slideDirection}>
-          <LottieAnimation animationJson={animationJson} />
+          {animationJson && <LottieAnimation animationJson={animationJson} />}
+          {imageArticle && (
+            <img src={`/${imageArticle}.webp`} alt={`${imageArticle} SVIS`} />
+          )}
         </Slide>
       </div>
       {!leftSideText ? ArticleContent() : null}

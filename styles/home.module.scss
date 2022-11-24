@@ -14,6 +14,7 @@
   align-items: center;
   margin: 2em 0;
   text-align: center;
+  column-gap: 2em;
 
   width: 75%;
 
@@ -26,6 +27,12 @@
   display: flex;
   justify-content: center;
   width: 50%;
+
+  img {
+    width: 100%;
+    object-fit: fill;
+    border-radius: 8px;
+  }
 
   @media (max-width: 440px) {
     width: 100%;
@@ -40,9 +47,11 @@
   color: rgb(21, 19, 60);
   letter-spacing: 5px;
   width: 50%;
+  padding: 1em;
 
   p {
     text-align: start;
+    margin-bottom: 1em;
   }
 
   @media (max-width: 440px) {

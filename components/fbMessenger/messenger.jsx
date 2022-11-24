@@ -5,8 +5,8 @@ function Messenger() {
     <div>
       <div id="fb-root"></div>
 
-      <div id="fb-customer-chat" class="fb-customerchat"></div>
-      <Script strategy="lazyOnload" id="">
+      <div id="fb-customer-chat" className="fb-customerchat"></div>
+      <Script strategy="lazyOnload" id="fb">
         {`
           var chatbox = document.getElementById("fb-customer-chat");
           chatbox.setAttribute("page_id", "484551888754393");

@@ -12,7 +12,7 @@ export default function Hero() {
   const pathNameQuery = router?.pathname;
 
   const image_dictionary = {
-    "/": "/hero2.jpg",
+    "/": "/hero2.webp",
     "/about-us": "/abouthero.jpg",
     "/contact-us": "/connect.jpg",
     "/news-and-events": "/connect.jpg",
