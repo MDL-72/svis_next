@@ -1,8 +1,31 @@
-import ContactUsForm from "../../components/contactForm/contactUsForm";
+import React, { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+import { useRouter } from "next/router";
 
-import { LottieAnimation } from "../../components/lottie/lottieModal";
+const ContactUsForm = dynamic(() =>
+  import("../../components/contactForm/contactUsForm")
+);
+
+const LottieAnimation = dynamic(() =>
+  import("../../components/lottie/LottieAnimation")
+);
 
 export default function ContactsPage() {
+  const pathToTitleMap = {
+    "/": "SVIS - Home",
+    "/about-us": "SVIS - About us",
+    "/contact-us": "SVIS - Contact us",
+    "/news-and-events": "SVIS - News & Events",
+  };
+
+  const router = useRouter();
+  const pathNameQuery = router?.pathname;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.title = pathToTitleMap[pathNameQuery];
+  }, []);
+
   return (
     <>
       <div className="contacts__cont">

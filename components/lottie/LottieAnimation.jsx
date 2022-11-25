@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { LottiePlayer } from "lottie-web";
 
-export const LottieAnimation = (props) => {
+export default function LottieAnimation(props) {
   const { animationJson } = props;
   const ref = useRef();
   const [lottie, setLottie] = useState(LottiePlayer);
@@ -26,4 +26,4 @@ export const LottieAnimation = (props) => {
   }, [lottie]);
 
   return <div ref={ref} />;
-};
+}

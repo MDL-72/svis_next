@@ -43,11 +43,11 @@ export default function Navigation() {
       path: "/about-us",
       menuName: "About us",
     },
-    // {
-    //   id: 4,
-    //   path: "/news-and-events",
-    //   menuName: "News & Events",
-    // },
+    {
+      id: 4,
+      path: "/news-and-events",
+      menuName: "News & Events",
+    },
     {
       id: 3,
       path: "/contact-us",

@@ -1,5 +1,5 @@
 import React from "react";
-import { LottieAnimation } from "../lottie/lottieModal";
+import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { Slide, Fade } from "react-awesome-reveal";
 import { Carousel } from "react-responsive-carousel";
@@ -7,8 +7,11 @@ import styles from "../../styles/home.module.scss";
 import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
+const LottieAnimation = dynamic(() => import("../lottie/LottieAnimation"));
+
 export default function HomeArticleModal(props) {
   const router = useRouter();
+
   const {
     slideDirection,
     animationJson,

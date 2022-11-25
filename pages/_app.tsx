@@ -1,10 +1,14 @@
 import "../styles/globals.css";
 import "../styles/contactUsForm.scss";
 import "../styles/contactUs.scss";
-
-import Layout from "../components/layout/layout";
+import dynamic from "next/dynamic";
+// import Layout from "../components/layout/layout";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+
+const Layout = dynamic(() =>
+  import("../components/layout/layout")
+);
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
