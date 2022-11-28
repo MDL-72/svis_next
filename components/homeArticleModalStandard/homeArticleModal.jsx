@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { Slide, Fade } from "react-awesome-reveal";
@@ -10,6 +10,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 const LottieAnimation = dynamic(() => import("../lottie/LottieAnimation"));
 
 export default function HomeArticleModal(props) {
+  const [isMobie, setIsMobile] = useState();
   const router = useRouter();
 
   const {
@@ -29,6 +30,10 @@ export default function HomeArticleModal(props) {
     carouselImages,
     imageSizeHeigth,
   } = props;
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 440);
+  }, []);
 
   const ArticleContent = () => {
     return (
@@ -66,7 +71,7 @@ export default function HomeArticleModal(props) {
               src={`/${imageArticle}.webp`}
               alt={`${imageArticle} SVIS`}
               width={400}
-              height={imageSizeHeigth}
+              height={isMobie ? 260 : imageSizeHeigth}
               // fill
             />
           )}
@@ -84,8 +89,8 @@ export default function HomeArticleModal(props) {
                     <Image
                       src={`/${item}.webp`}
                       alt={`${item} ico SVIS`}
-                      width={400}
-                      height={200}
+                      width={isMobie ? 200 : 400}
+                      height={isMobie ? 200 : 400}
                     />
                   </div>
                 );
