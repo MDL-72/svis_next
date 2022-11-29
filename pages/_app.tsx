@@ -60,6 +60,8 @@ export default function App({ Component, pageProps }: AppProps) {
           content="Spring of Virtue Integrated School, Inc."
         />
         <meta property="twitter:image" content="/hero.jpg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
       </Head>
       <Layout>
         <Component {...pageProps} />
