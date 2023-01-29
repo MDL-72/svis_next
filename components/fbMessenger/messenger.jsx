@@ -3,9 +3,9 @@ import Script from "next/script";
 function Messenger() {
   return (
     <div>
-      <div id="fb-root"></div>
+      <div id="fb-root" />
 
-      <div id="fb-customer-chat" className="fb-customerchat"></div>
+      <div id="fb-customer-chat" className="fb-customerchat" />
       <Script strategy="lazyOnload" id="fb">
         {`
           var chatbox = document.getElementById("fb-customer-chat");

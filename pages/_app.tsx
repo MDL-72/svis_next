@@ -14,6 +14,10 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8642026678974232"
+          crossOrigin="anonymous"></script>
+
         <meta name="title" content="Spring of Virtue Integrated School, Inc." />
         <meta name="description" content="We believe that our students should have the best possible education, and we are committed to providing them with the resources they need to succeed." />
         <meta name="keywords" content="SVIS, Spring of Virtue Integrated School, Inc. Spring of Virtue, School" />
@@ -60,6 +64,8 @@ export default function App({ Component, pageProps }: AppProps) {
           content="Spring of Virtue Integrated School, Inc."
         />
         <meta property="twitter:image" content="/hero.jpg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
       </Head>
       <Layout>
         <Component {...pageProps} />
