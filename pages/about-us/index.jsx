@@ -2,9 +2,7 @@ import styles from "../../styles/about-us.module.scss";
 import dynamic from "next/dynamic";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-const HomeArticleModal = dynamic(() =>
-  import("../../components/homeArticleModalStandard/homeArticleModal")
-);
+const HomeArticleModal = dynamic(() => import("../../components/homeArticleModalStandard/homeArticleModal"));
 
 const dataAboutusPage = [
   {
@@ -64,19 +62,10 @@ const dataAboutusPage = [
 ];
 
 export default function AboutPage(props) {
-  const pathToTitleMap = {
-    "/": "SVIS - Home",
-    "/about-us": "SVIS - About us",
-    "/contact-us": "SVIS - Contact us",
-    "/news-and-events": "SVIS - News & Events",
-  };
-
   const router = useRouter();
-  const pathNameQuery = router?.pathname;
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = pathToTitleMap[pathNameQuery];
   }, []);
 
   return (
