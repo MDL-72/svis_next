@@ -7,7 +7,7 @@ export default function ServicesPage() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = pathToTitleMap[pathNameQuery];
+    // document?.title = pathToTitleMap[pathNameQuery];
   }, []);
 
   return <div>index</div>;

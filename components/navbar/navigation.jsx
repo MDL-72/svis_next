@@ -58,10 +58,10 @@ export default function Navigation() {
   useEffect(() => {
     if (mobileMenu) {
       setIsLogo(true);
-      document.body.style.overflow = "auto";
+      // document.body.style.overflow = "auto";
     } else {
       setIsLogo(false);
-      document.body.style.overflow = "hidden";
+      // document.body.style.overflow = "hidden";
     }
   }, [mobileMenu]);
 

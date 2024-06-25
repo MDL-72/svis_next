@@ -46,7 +46,7 @@ const dataHomeArticles = [
     articleCta: true,
     articleCtaText: "Apply now",
     isArticleftSidedText: false,
-    articleCtaPath: "/",
+    articleCtaPath: "/contact-us",
     articleImage: null,
     articleCarouselImages: null,
     articleImageSizeHeight: null,
@@ -65,7 +65,7 @@ export default function HomePage(props) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = pathToTitleMap[pathNameQuery];
+    // document.title = pathToTitleMap[pathNameQuery];
   }, []);
 
   return (
@@ -75,7 +75,7 @@ export default function HomePage(props) {
           animationJson="lottie-register"
           contentTitle="Enrollment"
           contentLine1="Is Now Ongoing"
-          contentLine2="for SY: 2022 - 2023"
+          contentLine2="for SY: 2024 - 2025"
           cta={true}
           ctaText="Be a SVISian now"
           ctaPath="contact-us"

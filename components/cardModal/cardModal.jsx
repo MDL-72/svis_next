@@ -37,43 +37,28 @@ export default function CardModal(props) {
   ];
 
   return (
-    <>
-      <div className={styles["modal__card__cont"]}>
-        {courseData.map((item) => {
-          return (
-            <div
-              className={styles["modal__card__content__cont"]}
-              key={item.title}
-            >
-              <>
-                <div className={styles["modal__card__content"]}>
-                  <Image
-                    src={`/${item.image}.webp`}
-                    alt={`SVIS ${item.image} course icon`}
-                    height={200}
-                    width={200}
-                  />
-                  <p className={styles["modal__card__title__content"]}>
-                    {item.title}
-                    <br />
-                    {item.title2} <br /> {item.title3}
-                  </p>
-                </div>
-                <div className={styles["modal__card__content--back"]}>
-                  <p>{item.desc}</p>
-                  <p>{item.desc2}</p>
-                  <button
-                    onClick={() => router.push("contact-us")}
-                    className={styles["modal__card__content__cta"]}
-                  >
-                    Inquire Now
-                  </button>
-                </div>
-              </>
+    <div className={styles["modal__card__cont"]}>
+      {courseData.map((item) => {
+        return (
+          <div className={styles["modal__card__content__cont"]} key={item.title}>
+            <div className={styles["modal__card__content"]}>
+              <Image src={`/${item.image}.webp`} alt={`SVIS ${item.image} course icon`} height={200} width={200} />
+              <p className={styles["modal__card__title__content"]}>
+                {item.title}
+                <br />
+                {item.title2} <br /> {item.title3}
+              </p>
             </div>
-          );
-        })}
-      </div>
-    </>
+            <div className={styles["modal__card__content--back"]}>
+              <p>{item.desc}</p>
+              <p>{item.desc2}</p>
+              <button onClick={() => router.push("contact-us")} className={styles["modal__card__content__cta"]}>
+                Inquire Now
+              </button>
+            </div>
+          </div>
+        );
+      })}
+    </div>
   );
 }
