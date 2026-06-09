@@ -7,7 +7,9 @@ import styles from "../../styles/home.module.scss";
 import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
-const LottieAnimation = dynamic(() => import("../lottie/LottieAnimation"));
+const LottieAnimation = dynamic(() => import("../lottie/LottieAnimation"), {
+  ssr: false,
+});
 
 export default function HomeArticleModal(props) {
   const [isMobie, setIsMobile] = useState();

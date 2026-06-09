@@ -1,29 +1,25 @@
-import { useEffect, useRef, useState } from "react";
-import { LottiePlayer } from "lottie-web";
+import { useEffect, useRef } from "react";
 
-export default function LottieAnimation(props) {
-  const { animationJson } = props;
-  const ref = useRef();
-  const [lottie, setLottie] = useState(LottiePlayer);
+export default function LottieAnimation({ animationJson }) {
+  const ref = useRef(null);
 
   useEffect(() => {
-    import("lottie-web").then((Lottie) => setLottie(Lottie.default));
-  }, []);
+    let animation;
 
-  useEffect(() => {
-    if (lottie && ref.current) {
-      const animation = lottie.loadAnimation({
+    import("lottie-web").then((Lottie) => {
+      if (!ref.current) return;
+
+      animation = Lottie.default.loadAnimation({
         container: ref.current,
         renderer: "svg",
         loop: true,
         autoplay: true,
-        // path to your animation file, place it inside public folder
         path: `/${animationJson}.json`,
       });
+    });
 
-      return () => animation.destroy();
-    }
-  }, [lottie]);
+    return () => animation?.destroy();
+  }, [animationJson]);
 
   return <div ref={ref} />;
 }

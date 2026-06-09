@@ -4,7 +4,10 @@ import { useRouter } from "next/router";
 
 const ContactUsForm = dynamic(() => import("../../components/contactForm/contactUsForm"));
 
-const LottieAnimation = dynamic(() => import("../../components/lottie/LottieAnimation"));
+const LottieAnimation = dynamic(
+  () => import("../../components/lottie/LottieAnimation"),
+  { ssr: false }
+);
 
 export default function ContactsPage() {
   useEffect(() => {
