@@ -1,6 +1,6 @@
 import styles from "./navigation.module.scss";
 import Link from "next/link";
-import Image from "next/image";
+import SiteLogo from "@/components/layout/site-logo";
 
 import Mobilenav from "./mobilenav";
 import React, { useEffect, useState, useRef } from "react";
@@ -76,7 +76,7 @@ export default function Navigation() {
               styles[`navbar__logo__cont${isScrolled ? "--bg_applied" : ""}`]
             }
           >
-            <Image src={"/logo.png"} alt="SVIS logo" height={100} width={80} />
+            <SiteLogo className="h-[8vh] w-[8vh]" />
           </div>
           <div className={styles[`navbar__menu__cont`]}>
             {menuList.map((item) => {
@@ -124,7 +124,7 @@ export default function Navigation() {
                       ]
                     }
                   >
-                    <img src={"/logo.png"} alt="svis mobile icon" />
+                    <SiteLogo alt="svis mobile icon" className="h-full w-full" />
                   </MovingComponent>
                 )}
                 <CSSTransition

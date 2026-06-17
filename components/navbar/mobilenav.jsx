@@ -1,12 +1,13 @@
 import styles from "./navigation.module.scss";
 import Link from "next/link";
+import SiteLogo from "@/components/layout/site-logo";
 
 export default function Mobilenav(props) {
   const { menuList } = props;
   return (
     <>
       <div className={styles.mobile__menu__logo__cont}>
-        <img src={"/logo.png"} alt="" />
+        <SiteLogo className="h-full w-full" />
       </div>
       <div className={styles.mobile__menu}>
         {menuList.map((item) => {
