@@ -32,7 +32,7 @@ export default function Footer() {
           </div>
           <div className={styles["footer__contacts__item"]}>
             <Image src={"/phone.png"} alt="map_pin" height={25} width={100} />
-            <span>0949-560-9903 / 0917-838-9940</span>
+            <span>02-88961384 / 0917-838-9940</span>
           </div>
           <div className={styles["footer__contacts__item"]}>
             <Image src={"/email.png"} alt="map_pin" height={25} width={100} />
