@@ -25,11 +25,11 @@ export default function SiteFooter() {
           </p>
           <div className="flex items-center gap-3">
             <Phone className="h-4 w-4 shrink-0 text-gold" aria-hidden />
-            <span>02-85856240</span>
+            <span>02-88961384</span>
           </div>
           <div className="flex items-center gap-3">
             <Phone className="h-4 w-4 shrink-0 text-gold" aria-hidden />
-            <span>02-88961384 / 0917-838-9940</span>
+            <span>0917-838-9940</span>
           </div>
           <div className="flex items-center gap-3">
             <Mail className="h-4 w-4 shrink-0 text-gold" aria-hidden />
