@@ -3,4 +3,6 @@ export const pathToTitleMap = {
   "/about-us": "SVIS - About us",
   "/contact-us": "SVIS - Contact us",
   "/news-and-events": "SVIS - News & Events",
+  "/services": "SVIS - Services",
+  "/projects": "SVIS - Projects",
 };

@@ -1,5 +1,6 @@
 import styles from "./navigation.module.scss";
 import Link from "next/link";
+import Image from "next/image";
 import SiteLogo from "@/components/layout/site-logo";
 
 import Mobilenav from "./mobilenav";
@@ -134,7 +135,7 @@ export default function Navigation() {
                   timeout={300}
                 >
                   <div className={styles[`mobile__burger__cont--active`]}>
-                    <img src="/cancel.png" alt="exit icon" />
+                    <Image src="/cancel.png" alt="exit icon" width={45} height={45} />
                   </div>
                 </CSSTransition>
               </div>

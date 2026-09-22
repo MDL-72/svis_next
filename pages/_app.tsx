@@ -22,6 +22,7 @@ const robotoSlab = Roboto_Slab({
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const [title, setTitle] = useState<string>("SVIS");
+  const canonicalUrl = `https://www.springofvirtue.com${router.asPath.split("?")[0]}`;
 
   useEffect(() => {
     router.pathname &&
@@ -36,10 +37,11 @@ export default function App({ Component, pageProps }: AppProps) {
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8642026678974232"
           crossOrigin="anonymous"
         ></script>
-        <meta name="title" content="Spring of Virtue Integrated School, Inc." />
+        <link rel="canonical" href={canonicalUrl} key="canonical" />
         <meta
           name="description"
           content="We believe that our students should have the best possible education, and we are committed to providing them with the resources they need to succeed."
+          key="description"
         />
         <meta
           name="keywords"
@@ -55,8 +57,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#15133c" />
         <title>{title}</title>
-        <meta name="title" content="SVIS" />
-        <meta name="description" content="Spring of Virtue Integrated School, Inc." />
         <meta itemProp="name" content="Spring of Virtue Integrated School, Inc." />
         <meta itemProp="description" content="SVIS - Home" />
         <meta itemProp="image" content="/logo.svg" />

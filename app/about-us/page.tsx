@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "About us",
   description:
     "Learn about Spring of Virtue Integrated School — our history, mission, vision, facilities, and dedicated faculty.",
+  alternates: {
+    canonical: "/about-us",
+  },
 };
 
 export default function AboutPage() {

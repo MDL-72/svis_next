@@ -1,16 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import { pathToTitleMap } from "../../utils/pathTitleMap";
+import React, { useEffect } from "react";
+import Head from "next/head";
 
 export default function NewsEvents() {
-
-  const router = useRouter();
-  const pathNameQuery = router?.pathname;
-
   useEffect(() => {
     window.scrollTo(0, 0);
-    // document.title = pathToTitleMap[pathNameQuery];
   }, []);
 
-  return <div>news and events</div>;
+  return (
+    <>
+      <Head>
+        <meta
+          name="description"
+          content="Stay updated with the latest news and events from Spring of Virtue Integrated School."
+          key="description"
+        />
+      </Head>
+      <div>news and events</div>
+    </>
+  );
 }
