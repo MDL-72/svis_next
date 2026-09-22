@@ -30,12 +30,32 @@ export const metadata: Metadata = {
     "School",
     "Taguig",
   ],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     url: "https://www.springofvirtue.com/",
     title: "SVIS",
     description: "Spring of Virtue Integrated School, Inc.",
     images: ["/hero.svg"],
+  },
+};
+
+const schoolJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "School",
+  name: "Spring of Virtue Integrated School, Inc.",
+  url: "https://www.springofvirtue.com",
+  logo: "https://www.springofvirtue.com/logo.png",
+  image: "https://www.springofvirtue.com/hero.svg",
+  telephone: "+63-2-88961384",
+  email: "springofvirtue08@yahoo.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Blk 25 Lot 1 Phase 2 Pinagsama Village, Western Bicutan",
+    addressLocality: "Taguig City",
+    addressCountry: "PH",
   },
 };
 
@@ -47,6 +67,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${montserrat.variable} ${robotoSlab.variable}`}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schoolJsonLd) }}
+        />
         <SiteLayout>{children}</SiteLayout>
       </body>
     </html>

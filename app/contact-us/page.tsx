@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Contact us",
   description:
     "Get in touch with Spring of Virtue Integrated School. Reach out with questions about enrollment, programs, or visiting our campus.",
+  alternates: {
+    canonical: "/contact-us",
+  },
 };
 
 export default function ContactPage() {

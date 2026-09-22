@@ -1,14 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import React, { useEffect } from "react";
+import Head from "next/head";
 
 export default function ServicesPage() {
-  const router = useRouter();
-  const pathNameQuery = router?.pathname;
-
   useEffect(() => {
     window.scrollTo(0, 0);
-    // document?.title = pathToTitleMap[pathNameQuery];
   }, []);
 
-  return <div>index</div>;
+  return (
+    <>
+      <Head>
+        <meta
+          name="description"
+          content="Explore the academic programs and services offered by Spring of Virtue Integrated School."
+          key="description"
+        />
+      </Head>
+      <div>index</div>
+    </>
+  );
 }
